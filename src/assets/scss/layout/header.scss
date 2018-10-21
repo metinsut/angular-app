@@ -1,0 +1,39 @@
+header {
+  height: 80px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  background-color: $bc1;
+  .logo-block {
+    a {
+      @include text2;
+    }
+  }
+  .menu-block {
+    ul {
+      display: grid;
+      /* autoprefixer: off */
+      grid-auto-flow: column;
+      justify-content: center;
+      li {
+        padding: 20px;
+        a {
+          @include text1;
+        }
+      }
+    }
+  }
+  .user-block {
+    .action-item {
+      display: grid;
+      /* autoprefixer: off */
+      grid-auto-flow: column;
+      align-items: center;
+      i {
+        padding: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}

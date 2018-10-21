@@ -1,0 +1,17 @@
+@mixin text1 {
+    @include ubuntu-medium;
+    font-size: 1.6rem;
+    color:$tc1;
+}
+
+@mixin text2 {
+    @include ubuntu-bold;
+    font-size: 3rem;
+    color:$tc1;
+}
+
+@mixin text3 {
+    @include ubuntu-bold;
+    font-size: 2rem;
+    color:$tc1;
+}

@@ -1,0 +1,8 @@
+<article class="recipe-wrapper">
+    <ng-content></ng-content>
+    <div class="recipe-item-container">
+        <img [src]="recipe.imagePath" alt="{{recipe.name}}">
+        <h2>{{recipe.name}}</h2>
+        <p>{{recipe.desc}}</p>
+    </div>
+</article>
