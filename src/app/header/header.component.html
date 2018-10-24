@@ -18,9 +18,14 @@
     </nav>
 
     <div class="user-block">
-        <div class="action-item">
-            <i class="icon-sign-in"></i>
-            <p>LogIn</p>
+        <div class="action-item" [appDropDown]="isClose">
+            <p text1>Manage</p>
+            <div class="arrow-down"></div>
+        </div>
+        <div class="action-menu">
+            <a href="#">User</a>
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
         </div>
     </div>
 

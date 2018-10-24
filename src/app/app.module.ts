@@ -15,6 +15,7 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { HomeComponent } from './home/home.component';
 import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
+import { DropDownDirective } from './shared/drop-down.directive';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
     ShoppingListComponent,
     ShoppingEditComponent,
     HomeComponent,
-    NoPageFoundComponent
+    NoPageFoundComponent,
+    DropDownDirective
   ],
   imports: [
     BrowserModule,
