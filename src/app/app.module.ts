@@ -16,6 +16,7 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { HomeComponent } from './home/home.component';
 import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
 import { DropDownDirective } from './shared/drop-down.directive';
+import { ShoppingListService } from './shopping-list/shopping-list.service';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { DropDownDirective } from './shared/drop-down.directive';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

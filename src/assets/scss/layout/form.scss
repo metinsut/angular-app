@@ -1,0 +1,29 @@
+.form-root {
+    padding: 5px;
+    .form-wrapper {
+        padding: 5px;
+        .form-container {
+            padding: 5px;
+            &.title {
+                h3 {
+                    @include text3;
+                    padding: 0 10px;
+                }
+            }
+            .form-block {
+                padding: 5px;
+                display: grid;
+                grid-auto-flow: column;
+                justify-content: flex-start;
+                .form-item {
+                    display: grid;
+                    padding: 5px;
+                    @include text1;
+                    label {
+                        padding: 0 0 5px 0;
+                    }
+                }
+            }
+        }
+    }
+}

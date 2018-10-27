@@ -1,14 +1,16 @@
-@import "./config/variable";
 @import "./config/root";
-
+@import "./config/variable";
 @import "./config/fonts";
 @import "./config/icons";
-@import "./config/text";
-@import "./config/mixin";
 
+
+@import "./components/text";
+@import "./components/mixin";
 @import "./components/triangel";
+@import "./components/input";
 
 @import "./layout/header";
+@import "./layout/form";
 
 @import "./pages/main";
 @import "./pages/recipes";

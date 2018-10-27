@@ -1,5 +1,11 @@
 <div class="shop-list-container">
     <div class="shop-list-block">
-        <h1>Shop List</h1>
+        <app-shopping-edit></app-shopping-edit>
+        <hr>
+        <ul class="list-group">
+            <a class="list-group-item" style="cursor: pointer" *ngFor="let ingredient of ingredients">
+                {{ ingredient.name }} ({{ ingredient.amount }})
+            </a>
+        </ul>
     </div>
 </div>
