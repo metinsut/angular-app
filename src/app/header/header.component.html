@@ -1,18 +1,18 @@
 <header>
     <div class="logo-block">
-        <a href="" class="logo">Training Project</a>
+        <a routerLink="/" class="logo">Training Project</a>
     </div>
 
     <nav class="menu-block">
         <ul>
             <li>
-                <a href="#">Home</a>
+                <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
             </li>
             <li>
-                <a href="#" (click)="onSelect('recipes')">Recipes</a>
+                <a routerLink="/recipes" routerLinkActive="active">Recipes</a>
             </li>
             <li>
-                <a href="#" (click)="onSelect('shopping-list')">Shop List</a>
+                <a routerLink="/shopping-list" routerLinkActive="active">Shop List</a>
             </li>
         </ul>
     </nav>

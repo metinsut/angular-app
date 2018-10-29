@@ -9,18 +9,21 @@ export class RecipeService {
 
     private recipes: Recipe[] = [
         new Recipe(
+            1,
             'A test recipe',
             'This is the simple test desc',
             '/assets/images/image1.jpg',
             [new Ingredient('Meat', 1), new Ingredient('Domato', 2)]
         ),
         new Recipe(
+            2,
             'B test recipe',
             'This is the simple test desc',
             '/assets/images/image1.jpg',
             [new Ingredient('Meat', 1), new Ingredient('Domato', 2)]
         ),
         new Recipe(
+            3,
             'C test recipe',
             'This is the simple test desc',
             '/assets/images/image1.jpg',
@@ -30,12 +33,14 @@ export class RecipeService {
 
     constructor(private slService: ShoppingListService) {}
 
-    getRecipe = () => {
+    getRecipes = () => {
         return [...this.recipes];
+    }
+    getRecipe = id => {
+        return this.recipes.find(item => item.id === id);
     }
 
     addIngToShopList = (ingredients: Ingredient[]) => {
-        console.log(ingredients);
         this.slService.addIngredients(ingredients);
     }
 }

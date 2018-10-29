@@ -10,6 +10,7 @@
             grid-row: auto;
             .recipe-block {
                 padding: 5px;
+                justify-self: flex-start;
                 .recipe-item {
                     display: grid;
                     grid-template-columns: 1fr 25%;
@@ -17,6 +18,9 @@
                     border-radius: 5px;
                     padding: 10px;
                     cursor: pointer;
+                    &.active {
+                        background-color: $tc2;
+                    }
                     h3 {
                         @include text3;
                         grid-column: 1/2;

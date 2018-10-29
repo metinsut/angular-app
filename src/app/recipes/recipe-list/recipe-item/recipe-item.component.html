@@ -1,5 +1,9 @@
-<div class="recipe-block" *ngIf="recipe" (click)="onSelected()">
-    <a class="recipe-item">
+<div class="recipe-block">
+    <a 
+    class="recipe-item" 
+    [routerLink]="[ '/recipes', recipe.id ]"
+    routerLinkActive="active"
+    >
         <h3>{{recipe.name}}</h3>
         <p>{{recipe.desc}}</p>
         <img [src]="recipe.imagePath" alt="{{recipe.name}}">

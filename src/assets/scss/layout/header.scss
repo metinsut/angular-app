@@ -13,13 +13,15 @@ header {
     .menu-block {
         ul {
             display: grid;
-            /* autoprefixer: off */
             grid-auto-flow: column;
             justify-content: center;
             li {
                 padding: 20px;
                 a {
                     @include text1;
+                    &.active {
+                        color: $tc2;
+                    }
                 }
             }
         }

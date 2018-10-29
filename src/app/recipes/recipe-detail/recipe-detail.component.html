@@ -1,5 +1,4 @@
-<article class="recipe-wrapper">
-    <ng-content></ng-content>
+<article *ngIf="recipe" class="recipe-wrapper">
     <div class="recipe-item-container">
         <img [src]="recipe.imagePath" alt="{{recipe.name}}">
         <div>
@@ -16,7 +15,7 @@
             </div>
             <div class="action-menu">
                 <a href="#" (click)="onAddShopList()">To Shopping List</a>
-                <a href="#">Settings</a>
+                <a [routerLink]="[ '/recipes', recipe.id,'edit' ]">Settings</a>
                 <a href="#">Logout</a>
             </div>
         </div>
