@@ -1,0 +1,27 @@
+<article *ngIf="recipe" class="recipe-wrapper">
+    <div class="recipe-item-container">
+        <img [src]="recipe.imagePath" alt="{{recipe.name}}">
+        <div>
+            <h2>{{recipe.name}}</h2>
+            <p>{{recipe.desc}}</p>
+        </div>
+    </div>
+    <br>
+    <div class="recipe-action-container">
+        <div class="action-block">
+            <div class="action-item" appDropDown>
+                <p text1>Manage</p>
+                <div class="arrow-down"></div>
+            </div>
+            <div class="action-menu">
+                <a href="#" (click)="onAddShopList()">To Shopping List</a>
+                <a [routerLink]="[ '/recipes', recipe.id,'edit' ]">Settings</a>
+                <a href="#">Logout</a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="shop-list-container">
+        <p *ngFor="let ingredient of recipe.ingredients">{{ingredient.name}}- {{ingredient.amount}}</p>
+    </div>
+</article>

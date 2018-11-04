@@ -9,24 +9,24 @@ import { RecipeDetailDefaultComponent } from './recipes/recipe-detail-default/re
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 
 const routes: Routes = [
-    { path: '', component: HomeComponent },
-    { path: 'home', component: HomeComponent },
-    {
-        path: 'recipes',
-        component: RecipesComponent,
-        children: [
-            { path: '', component: RecipeDetailDefaultComponent },
-            { path: 'new', component: RecipeEditComponent },
-            { path: ':id', component: RecipeDetailComponent },
-            { path: ':id/edit', component: RecipeEditComponent }
-        ]
-    },
-    { path: 'shopping-list', component: ShoppingListComponent },
-    { path: '**', component: NoPageFoundComponent }
+   { path: '', component: HomeComponent },
+   { path: 'home', component: HomeComponent },
+   {
+      path: 'recipes',
+      component: RecipesComponent,
+      children: [
+         { path: '', component: RecipeDetailDefaultComponent },
+         { path: 'new', component: RecipeEditComponent },
+         { path: ':id', component: RecipeDetailComponent },
+         { path: ':id/edit', component: RecipeEditComponent }
+      ]
+   },
+   { path: 'shopping-list', component: ShoppingListComponent },
+   { path: '**', component: NoPageFoundComponent }
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
+   imports: [RouterModule.forRoot(routes)],
+   exports: [RouterModule]
 })
 export class AppRoutingModule {}
