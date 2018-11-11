@@ -1,5 +1,16 @@
 .shop-list-container {
-    .shop-list-block {
-        
-    }
+   .shop-list-block {
+      ul {
+         padding: 20px;
+         li {
+            padding: 10px;
+            &:not(:first-child) {
+               border-top: 1px solid $bc1;
+            }
+            a {
+               @include text1;
+            }
+         }
+      }
+   }
 }

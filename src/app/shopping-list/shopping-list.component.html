@@ -1,11 +1,17 @@
 <div class="shop-list-container">
-    <div class="shop-list-block">
-        <app-shopping-edit></app-shopping-edit>
-        <hr>
-        <ul class="list-group">
-            <a class="list-group-item" style="cursor: pointer" *ngFor="let ingredient of ingredients">
-                {{ ingredient.name }} ({{ ingredient.amount }})
+   <div class="shop-list-block">
+      <app-shopping-edit></app-shopping-edit>
+      <hr />
+      <ul class="list-group">
+         <li class="list-item" *ngFor="let ingredient of ingredients; let i = index">
+            <a
+               class="list-group-item"
+               style="cursor: pointer"
+               (click)="onEditItem(i)"
+            >
+               {{ ingredient.name }} ({{ ingredient.amount }})
             </a>
-        </ul>
-    </div>
+         </li>
+      </ul>
+   </div>
 </div>

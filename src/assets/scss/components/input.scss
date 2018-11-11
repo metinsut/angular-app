@@ -1,2 +1,6 @@
 input {
+   height: 40px;
+   border-radius: 4px;
+   border: 2px solid $bc2;
+   @include text1;
 }

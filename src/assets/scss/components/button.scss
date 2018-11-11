@@ -1,11 +1,23 @@
 .btn {
-    padding: 10px;
-    @include text1;
-    color: white;
-    border-radius: 4px;
+   padding: 10px;
+   @include text1;
+   color: white;
+   border-radius: 4px;
 }
 
 .btn-new {
-    @extend .btn;
-    background-color: $tc3;
+   @extend .btn;
+   background-color: $tc3;
+}
+.btn-add {
+   @extend .btn;
+   background-color: $tc3;
+}
+.btn-clear {
+   @extend .btn;
+   background-color: $tc2;
+}
+.btn-delete {
+   @extend .btn;
+   background-color: $tc4;
 }
