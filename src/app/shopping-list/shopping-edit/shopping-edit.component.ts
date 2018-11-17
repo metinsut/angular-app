@@ -25,6 +25,8 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
    editMode = false;
    editedItemIndex: number;
    editedItem: Ingredient;
+   name;
+   amount;
 
    constructor(private slService: ShoppingListService) {}
 
